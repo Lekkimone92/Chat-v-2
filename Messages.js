@@ -68,9 +68,9 @@ class Messages extends React.Component {
 
   render(){
     const { messages, loading } = this.props;
-    if (loading) return (<Text>'Patientez chargement...'</Text>)
+    if (loading) return (<Text>Patientez chargement...</Text>)
     if(!messages.allMessages){
-      return (<Text>'Pas de donnees.....'</Text>)
+      return (<Text style={styles.load}>Chargement des données.....</Text>)
     }else {
       return (
         <View style={styles.container}>
@@ -121,6 +121,12 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderWidth: 1,
     marginTop: 10,
+  },
+  load: {
+    flex: 1,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    marginTop: 50,
   }
 });
 
