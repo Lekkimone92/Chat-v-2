@@ -125,7 +125,6 @@ const styles = StyleSheet.create({
   load: {
     flex: 1,
     alignSelf: 'center',
-    justifyContent: 'center',
     marginTop: 50,
   }
 });
